@@ -1,0 +1,14 @@
+.inline {
+    display: inline;
+    width: 75% auto;
+    height: auto;
+}
+.profile-block {
+    width: 25%;
+    height: auto;
+}
+.profile-picture {
+    height: 150px;
+    width: 125px;
+    border-radius: 50%
+}
