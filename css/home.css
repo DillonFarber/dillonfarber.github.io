@@ -1,18 +1,25 @@
-/* .body {
-    width: flex;
-    height: auto;
-} */
-/* .profile-block {
-    width: 25%; 
-    height: auto;
-    display: inline;
-} */
-.profile-picture {
-    height: 150px;
-    width: 125px;
-    border-radius: 50%
+/* TODO: fix the background of the body */
+.body{
+    background-color: antiquewhite;
 }
-/* .title {
-    width: 75%;
-    display: inline;
-} */
+/* Title and profile picture
+TODO: fix the font
+TODO: fix the profile picture and the text alignment */
+.title {
+    display: inline-block;
+    text-align: center;
+    padding:0;
+    margin: 0;
+    width: 70%;
+}
+.profile-block {
+    display: inline-block;
+    width: 25%;
+}
+.profile-picture {
+    height: 250px;
+    width: 225px;
+    border-radius: 50%;
+    align-content: center;
+    margin: 10px 0;
+}
