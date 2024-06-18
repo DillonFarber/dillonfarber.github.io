@@ -2,6 +2,17 @@
 .body{
     background-color: antiquewhite;
 }
+
+.fixed-tab {
+    width: 50px;
+    height: 50px;
+    background-color: darkslategray;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: -1px;
+    margin-bottom: auto;
+    position: fixed;
+}
 /* Title and profile picture
 TODO: fix the font
 TODO: fix the profile picture and the text alignment */
