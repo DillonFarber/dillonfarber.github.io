@@ -4,9 +4,14 @@ body{
 .gird-container {
     display: grid;
     grid-template-areas: 
-    "header header header "
-    "nav body body"
-    "nav body body";
+    "header header header"
+    "nav title1 title1"
+    "nav about-me about-me"
+    "nav title2 title2"
+    "nav service service"
+    "nav title3 title3"
+    "nav family family"
+    "nav skills skills";
     
     gap: 5px;
     padding: 5px;
@@ -17,9 +22,6 @@ body{
     grid-area: nav;
 }
 
-.gird-container > div.body-colm {
-    grid-area: profile;
-}
 .web-name {
     margin: 20px 20px;
     color: aliceblue;
@@ -28,7 +30,6 @@ body{
     position: fixed;
     grid-area: header;
 }
-
 
 .gird-container > div.nav-list {
     position: sticky;
@@ -40,32 +41,69 @@ body{
 }
 
 .gird-container > div.details {
-    grid-area: body;
+    grid-area: details;
     font-size: larger;
     color: aliceblue;
 }
 
-
-
-.profile-picture {
-    grid-area: profile;
-    height: 250px;
-    width: 225px;
-    border-radius: 50%;
-    right: 0%;
-}
-
-
 .gird-container > div.skills-div {
-    grid-area: skill;
-    margin-top: 0;
+    grid-area: skills;
+    margin: 0% 10% 0% 10%;
     text-align: center;
 }
+
+.gird-container > div.title1{
+    grid-area: title1;
+    margin: 10% 10% 0% 10%;
+}
+
+.gird-container > div.about-me {
+    grid-area: about-me;
+    margin: 0% 15% 0% 15%;
+}
+
+.gird-container > div.title2 {
+    grid-area: title2;
+    margin: 0% 10% 0% 10%;
+}
+
+.gird-container > div.service {
+    grid-area: service;
+    margin: 0% 15% 0% 15%;
+}
+
+.gird-container > div.title3 {
+    grid-area: title3;
+    margin: 0% 10% 0% 10%;
+}
+
+.gird-container > div.family {
+    grid-area: family;
+    margin: 0% 15% 0% 15%;
+}
+
 #nav-sticky {
     position: sticky;
     top: 0;
     overflow: hidden;
 }
+
+.body-h2 {
+    color: #bababa;
+}
+
+.about-me > p {
+    color: #bababa;
+}
+
+.service > p {
+    color: #bababa;
+}
+
+.family > p {
+    color: #bababa;
+}
+
 .skills-div h2 {
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
@@ -73,6 +111,8 @@ body{
     border-bottom: 5px solid #c7c7c7;
     text-align: left;
 }
+
+
 /* Skills card */
 .skill {
     display: inline-block;
