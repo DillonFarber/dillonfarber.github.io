@@ -1,100 +1,77 @@
-/* TODO: fix the background of the body */
-body {
-    background-color: rgb(239, 239, 239);
-    margin: auto;
+body{
+    background-color: rgb(18, 17, 17);
 }
-/* Tab for menu */
-.fixed-tab {
+.gird-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header "
+    "nav space profile"
+    "nav body body"
+    'nav skill skill';
+    
+    gap: 5px;
+    padding: 5px;
+}
+
+.gird-container > div.nav-colm {
+    position: relative;
+    grid-area: nav;
+}
+
+.gird-container > div.body-colm {
+    grid-area: profile;
+}
+.web-name {
+    margin: 20px 20px;
+    color: aliceblue;
+}
+.gird-container > h1.web-name {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    background-color: darkslategray;
-    margin-top: 10px;
-    padding:0%;
-    margin-right: auto;
-    margin-left: -1px;
-    margin-bottom: auto;
-    position: fixed;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    grid-area: header;
 }
 
 
-.lines {
-    width: auto;
-    align-content: space-between;
-    height: 50px;
+.gird-container > div.nav-list {
+    position: sticky;
+    grid-area: nav;
+    top: 100px;
+    list-style-type: none;
+    margin: 10px;
     padding: 0;
-    margin: 4px;
 }
 
-.line {
-    margin-top: 5px;
-    margin-left: 0;
-    width: 40px;
-    height: 5px;
-    padding: 0px;
-    background-color: aliceblue;
+.gird-container > div.details {
+    grid-area: body;
+    font-size: larger;
+    color: aliceblue;
 }
 
-/* Title and profile picture
-TODO: fix the font
-TODO: fix the profile picture and the text alignment */
 
-.top-title-profile {
-    height: auto;
-    width: 100%;
-    margin: 5px 0;
-}
-.title {
-    display: inline-block;
-    text-align: center;
-    width: 75%;
-}
-.profile-block {
-    display: inline-block;
-    align-items: center;
-    width: 24%;
-    height: auto;
-    overflow: hidden;
-    margin: 0;
-}
+
 .profile-picture {
+    grid-area: profile;
     height: 250px;
     width: 225px;
     border-radius: 50%;
-    align-content:center;
-    margin: 10px 0;
-}
-/* about me block of content */
-.about-me {
-    margin-top: 0;
-}
-.about-me h2 {
-    margin-left: 20%;
-    margin-right: 10%;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
-    border-bottom: 5px solid #000;
-    text-align: left;
+    right: 0%;
 }
 
-.about-me p {
-    font-size: 20px;
-    margin: auto 20% 50px 20%;
-    text-indent: 20px;
-}
-/* Skills section */
-.skills-div {
+
+.gird-container > div.skills-div {
+    grid-area: skill;
     margin-top: 0;
     text-align: center;
 }
+#nav-sticky {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
 .skills-div h2 {
-    margin-left: 20%;
-    margin-right: 10%;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
-    border-bottom: 5px solid #000;
+    color: #d8d8d8;
+    border-bottom: 5px solid #c7c7c7;
     text-align: left;
 }
 /* Skills card */
@@ -133,9 +110,9 @@ TODO: fix the profile picture and the text alignment */
 }
 
 .skill-card-front {
-    background-color: cadetblue;
+    background-color: rgb(36, 38, 38);
     border-radius: 20%;
-    color:#000;
+    color:#bababa;
     padding-top: 10px;
 }
 
@@ -150,7 +127,7 @@ TODO: fix the profile picture and the text alignment */
 }
 
 .skill-card-back {
-    background-color: #000;
+    background-color: rgb(36, 38, 38);
     color: white;
     border-radius: 20%;
     transform: rotateY(180deg);
@@ -182,68 +159,4 @@ TODO: fix the profile picture and the text alignment */
     margin: 0;
     text-decoration: none;
     color: #000;
-}
-
-/* Projects Section */
-.projects-div {
-    margin-top: 0;
-    text-align: center;
-    width: auto;
-    height: auto;
-
-}
-
-.projects-div h2 {
-    margin-left: 20%;
-    margin-right: 10%;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
-    border-bottom: 5px solid #000;
-    text-align: left;
-}
-
-.projects-div p {
-    font-size: 20px;
-    margin: 25px 20% 50px 20%;
-    text-indent: 20px;
-
-}
-.projects {
-    display: inline-block;
-    background-color: transparent;
-    width: 225px;
-    height: 300px;
-    margin: 10px 5px;
-}
-
-.project-card-inner {
-    position: relative;
-    width: auto;
-    height: auto;
-}
-
-.project-card {
-    position: relative;
-    margin: 0;
-    background-color: #000;
-    width: inherit;
-    height: inherit;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-}
-
-.project-gifs {
-    width: inherit;
-    height: inherit;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.project-gifs  img {
-    display: block;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
 }
