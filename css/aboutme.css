@@ -1,112 +1,225 @@
-body{
-    background-color: rgb(18, 17, 17);
-}
-.gird-container {
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "nav title1 title1"
-    "nav about-me about-me"
-    "nav title2 title2"
-    "nav service service"
-    "nav title3 title3"
-    "nav family family"
-    "nav skills skills";
+
+
+@media only screen and (min-width: 600px) {
+    body{
+        background-color: rgb(18, 17, 17);
+    }
+    .gird-container {
+        display: grid;
+        grid-template-areas: 
+        
+        "nav title1 title1"
+        "nav about-me about-me"
+        "nav title2 title2"
+        "nav service service"
+        "nav title3 title3"
+        "nav family family"
+        "nav skills skills";
+        
+        gap: 5px;
+        padding: 5px;
+    }
     
-    gap: 5px;
-    padding: 5px;
+    .gird-container > div.nav-colm {
+        position: relative;
+        grid-area: nav;
+    }
+    
+    .web-name {
+        margin: 20px 20px;
+        color: aliceblue;
+    }
+    .gird-container > h1.web-name {
+        position: fixed;
+        grid-area: header;
+    }
+    
+    .gird-container > div.nav-list {
+        position: sticky;
+        grid-area: nav;
+        top: 100px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+    }
+    
+    
+    .gird-container > div.skills-div {
+        grid-area: skills;
+        margin: 0% 10% 0% 10%;
+        text-align: center;
+    }
+    
+    .gird-container > div.title1{
+        grid-area: title1;
+        margin: 10% 10% 0% 10%;
+    }
+    
+    .gird-container > div.about-me {
+        grid-area: about-me;
+        margin: 0% 15% 0% 15%;
+    }
+    
+    .gird-container > div.title2 {
+        grid-area: title2;
+        margin: 0% 10% 0% 10%;
+    }
+    
+    .gird-container > div.service {
+        grid-area: service;
+        margin: 0% 15% 0% 15%;
+    }
+    
+    .gird-container > div.title3 {
+        grid-area: title3;
+        margin: 0% 10% 0% 10%;
+    }
+    
+    .gird-container > div.family {
+        grid-area: family;
+        margin: 0% 15% 0% 15%;
+    }
+    
+    #nav-sticky {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+    }
+    
+    .body-h2 {
+        color: #bababa;
+    }
+    
+    .about-me > p {
+        color: #bababa;
+    }
+    
+    .service > p {
+        color: #bababa;
+    }
+    
+    .family > p {
+        color: #bababa;
+    }
 }
 
-.gird-container > div.nav-colm {
-    position: relative;
-    grid-area: nav;
-}
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(18, 17, 17);
+        margin: 0;
+    }
+    .gird-container {
+        display: grid;
+        grid-template-areas: 
+        "nav title1 title1 title1"
+        "nav about-me about-me about-me"
+        "nav title2 title2 title2"
+        "nav service service service"
+        "nav title3 title3 title3"
+        "nav family family family"
+        "nav skills skills skills";
+        
+    }
 
-.web-name {
-    margin: 20px 20px;
-    color: aliceblue;
-}
-.gird-container > h1.web-name {
-    position: fixed;
-    grid-area: header;
-}
+    .gird-container > div.nav-colm {
+        position: relative;
+        grid-area: nav;
+    }
+    
+    .web-name {
+        margin: 20px 20px;
+        color: aliceblue;
+    }
+    .gird-container > h1.web-name {
+        position: fixed;
+        grid-area: header;
+    }
+    
+    .gird-container > div.nav-list {
+        position: sticky;
+        grid-area: nav;
+        top: 100px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+    }
+    #nav-sticky {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+    }
+    
+    .gird-container > div.skills-div {
+        grid-area: skills;
+        /* width: 66%; */
+        justify-content: end;
+        align-content: end;
+        margin: 0% 10% 0% 10%;
+        text-align: center;
+    }
+    
+    .gird-container > div.title1{
+        grid-area: title1;
+        margin: 10% 10% 0% 10%;
+    }
+    
+    .gird-container > div.about-me {
+        grid-area: about-me;
+        margin: 0% 15% 0% 15%;
+    }
+    
+    .gird-container > div.title2 {
+        grid-area: title2;
+        margin: 0% 10% 0% 10%;
+    }
+    
+    .gird-container > div.service {
+        grid-area: service;
+        margin: 0% 15% 0% 15%;
+    }
+    
+    .gird-container > div.title3 {
+        grid-area: title3;
+        margin: 0% 10% 0% 10%;
+    }
+    
+    .gird-container > div.family {
+        grid-area: family;
+        margin: 0% 15% 0% 15%;
+    }
 
-.gird-container > div.nav-list {
-    position: sticky;
-    grid-area: nav;
-    top: 100px;
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-}
-
-.gird-container > div.details {
-    grid-area: details;
-    font-size: larger;
-    color: aliceblue;
-}
-
-.gird-container > div.skills-div {
-    grid-area: skills;
-    margin: 0% 10% 0% 10%;
-    text-align: center;
-}
-
-.gird-container > div.title1{
-    grid-area: title1;
-    margin: 10% 10% 0% 10%;
-}
-
-.gird-container > div.about-me {
-    grid-area: about-me;
-    margin: 0% 15% 0% 15%;
-}
-
-.gird-container > div.title2 {
-    grid-area: title2;
-    margin: 0% 10% 0% 10%;
-}
-
-.gird-container > div.service {
-    grid-area: service;
-    margin: 0% 15% 0% 15%;
-}
-
-.gird-container > div.title3 {
-    grid-area: title3;
-    margin: 0% 10% 0% 10%;
-}
-
-.gird-container > div.family {
-    grid-area: family;
-    margin: 0% 15% 0% 15%;
-}
-
-#nav-sticky {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-}
-
-.body-h2 {
-    color: #bababa;
-}
-
-.about-me > p {
-    color: #bababa;
-}
-
-.service > p {
-    color: #bababa;
-}
-
-.family > p {
-    color: #bababa;
+    /* .gird-container > div.rand{
+        grid-area: rand;
+        position: relative;
+        height: 100px;
+        width: 200px;
+        background-color: #d8d8d8;
+    }
+    .random{
+        position: absolute;
+        height: 100px;
+        width: 200px;
+        background-color: #d8d8d8;
+    } */
+    
+    .body-h2 {
+        color: #bababa;
+    }
+    
+    .about-me > p {
+        color: #bababa;
+    }
+    
+    .service > p {
+        color: #bababa;
+    }
+    
+    .family > p {
+        color: #bababa;
+    }
 }
 
 .skills-div h2 {
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
     color: #d8d8d8;
     border-bottom: 5px solid #c7c7c7;
     text-align: left;
@@ -198,4 +311,11 @@ body{
     margin: 0;
     text-decoration: none;
     color: #000;
+}
+
+.associated-projects > a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    color:#4c7c78
 }

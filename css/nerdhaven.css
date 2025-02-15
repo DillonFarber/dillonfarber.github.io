@@ -1,162 +1,85 @@
-body{
-    background-color: rgb(18, 17, 17);
-}
-.gird-container {
-    display: grid;
-    grid-template-areas: 
-    "header header header "
-    "nav space profile"
-    "nav body body"
-    'nav skill skill';
+@media only screen and (min-width: 600px){
+    body{
+        background-color: rgb(18, 17, 17);
+    }
+    .gird-container {
+        display: grid;
+        grid-template-areas: 
+        "header header header "
+        "nav space profile"
+        "nav body body"
+        'nav skill skill';
+        
+        gap: 5px;
+        padding: 5px;
+    }
     
-    gap: 5px;
-    padding: 5px;
+    .gird-container > div.nav-colm {
+        position: relative;
+        grid-area: nav;
+    }
+    
+    .gird-container > div.body-colm {
+        grid-area: profile;
+    }
+    .web-name {
+        margin: 20px 20px;
+        color: aliceblue;
+    }
+    .gird-container > h1.web-name {
+        position: fixed;
+        grid-area: header;
+    }
+    
+    
+    .gird-container > div.nav-list {
+        position: sticky;
+        grid-area: nav;
+        top: 100px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+    }
+
+    #nav-sticky {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+    }
 }
 
-.gird-container > div.nav-colm {
-    position: relative;
-    grid-area: nav;
-}
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(18, 17, 17);
+        margin: 0;
+    }
+    header {
+        display: none;
+        margin: 0;
+    }
 
-.gird-container > div.body-colm {
-    grid-area: profile;
-}
-.web-name {
-    margin: 20px 20px;
-    color: aliceblue;
-}
-.gird-container > h1.web-name {
-    position: fixed;
-    grid-area: header;
-}
+    .gird-container {
+        display:inline;
+        margin: 10px;
+    }
+    .nav-colm {
+        position: relative;
+        background-color: #000;
+    }
+    .nav-list > li {
+        display: inline;
+    }
+    #nav-sticky {
+        position: fixed;
+        height: 15%;
+        width: 100%;
+        background-color: #000;
+    }
+    .web-name {
+        position: absolute;
+        /* margin: 20px 20px; */
+        color: aliceblue;
+    }
 
-
-.gird-container > div.nav-list {
-    position: sticky;
-    grid-area: nav;
-    top: 100px;
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-}
-
-.gird-container > div.details {
-    grid-area: body;
-    font-size: larger;
-    color: aliceblue;
-}
-
-
-
-.profile-picture {
-    grid-area: profile;
-    height: 250px;
-    width: 225px;
-    border-radius: 50%;
-    right: 0%;
-}
-
-
-.gird-container > div.skills-div {
-    grid-area: skill;
-    margin-top: 0;
-    text-align: center;
-}
-#nav-sticky {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-}
-.skills-div h2 {
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
-    color: #d8d8d8;
-    border-bottom: 5px solid #c7c7c7;
-    text-align: left;
-}
-/* Skills card */
-.skill {
-    display: inline-block;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    margin: 10px 10px;
-    perspective: 1000px;
-}
-
-.skill-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.skill:hover .skill-card-inner{
-    transform: rotateY(180deg);
-}
-
-.skill-card-front, .skill-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.skill-card-front {
-    background-color: rgb(36, 38, 38);
-    border-radius: 20%;
-    color:#bababa;
-    padding-top: 10px;
-}
-
-.skill-card-front h3 {
-    position: relative;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    text-align: center;
-}
-
-.skill-card-back {
-    background-color: rgb(36, 38, 38);
-    color: white;
-    border-radius: 20%;
-    transform: rotateY(180deg);
-}
-
-.skill-card-back p {
-    font-size: 15px;
-    margin-bottom: 0;
-}
-
-.skill-card-front img {
-    position: relative;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    margin: 0;
-    border-radius: 10px;
-    max-width: 75%;
-    max-height: 75%;
-    min-width: 75%;
-    min-height: 75%;
-    width: auto;
-    height: auto;
-}
-
-.skill-card-front > a {
-    display: block;
-    font-size: 10px;
-    margin: 0;
-    text-decoration: none;
-    color: #000;
+    
 }
