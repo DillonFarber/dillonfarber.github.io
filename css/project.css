@@ -1,0 +1,132 @@
+@media only screen and (min-width: 600px){
+    body{
+        background-color: rgb(18, 17, 17);
+    }
+    .gird-container {
+        display: grid;
+        grid-template-areas: 
+        "nav projects projects";
+        
+        gap: 5px;
+        padding: 5px;
+    }
+    
+    .gird-container > div.nav-colm {
+        position: relative;
+        grid-area: nav;
+    }
+    
+    .web-name {
+        margin: 20px 20px;
+        color: aliceblue;
+    }
+    
+    .gird-container > div.nav-list {
+        position: sticky;
+        grid-area: nav;
+        top: 100px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+    }
+
+    #nav-sticky {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+    }
+
+    .gird-container > div.projects {
+        grid-area: projects;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 10px;
+    }
+    .project{
+        background-color:rgb(89, 89, 90);
+        border-radius: 15px;
+        justify-content: center;
+    }
+    .project > p {
+        text-align: center;
+        color: azure;
+        background-color:rgb(89, 89, 90);
+        max-width: 200px;
+        max-height: 350px;
+    }
+
+    .project-video{
+        object-fit: cover;
+        border-radius: 15px;
+        width: 250px;
+        height: 450px;
+        min-width: 150px;
+        min-height: 275px;
+    }
+
+    .project-img{
+        object-fit: cover;
+        border-radius: 15px;
+        width: 250px;
+        height: 450px;
+    }
+    .title {
+        font-size: 18px;
+        color: rgb(172, 188, 246);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(18, 17, 17);
+    }
+    .gird-container {
+        display: grid;
+        grid-template-areas: 
+        "header header header "
+        "nav projects projects";
+        
+        gap: 5px;
+        padding: 5px;
+    }
+    
+    .gird-container > div.nav-colm {
+        position: relative;
+        grid-area: nav;
+    }
+    
+    .web-name {
+        margin: 20px 20px;
+        color: aliceblue;
+    }
+    
+    .gird-container > div.nav-list {
+        position: sticky;
+        grid-area: nav;
+        top: 100px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+    }
+
+    #nav-sticky {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+    }
+
+    .gird-container > div.project {
+        grid-area: projects;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 10px;
+    }
+    
+}
+
+
+
