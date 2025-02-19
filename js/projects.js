@@ -43,13 +43,10 @@ window.onload = function () {
         params = url.split('?')[1].split('&'),
         data = {}, tmp;
     for (var i = 0, l = params.length; i < l; i++) {
-         tmp = params[i].split('=');
-         data[tmp[0]] = tmp[1];
+        tmp = params[i].split('=');
+        data[tmp[0]] = tmp[1];
     }
     id = document.getElementById('here').innerHTML = data.id;
 }
 
-const projectTitle = document.getElementById('title');
-projectTitle = map[id].name;
-
-document.body.style.backgroundColor = 'black';
+document.getElementById('title') = map[id].name;

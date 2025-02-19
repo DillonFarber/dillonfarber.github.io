@@ -1,11 +1,7 @@
-
 @media only screen and (min-width: 600px){
-
     body{
-        background-color: black;
+        background-color: rgb(18, 17, 17);
     }
-
-
     .gird-container {
         display: grid;
         grid-template-areas: 
@@ -39,9 +35,6 @@
         top: 0;
         overflow: hidden;
     }
-
-    
-    
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,41 +76,8 @@
         overflow: hidden;
     }
 
-    .gird-container > div.projects {
-        grid-area: projects;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        position: relative;
-        gap: 10px;
-    }
-    .project{
-        background-color:rgb(89, 89, 90);
-        border-radius: 15px;
-        justify-content: center;
-    }
-    .project > p {
-        text-align: center;
-        color: azure;
-        background-color:rgb(89, 89, 90);
-        width: 150px;
-        max-height: 225px;
-    }
-
-    .project-video{
-        object-fit: cover;
-        border-radius: 15px;
-        width: 150px;
-        height: 350px;
-        min-width: 150px;
-        min-height: 275px;
-    }
-
-    .project-img{
-        object-fit: cover;
-        border-radius: 15px;
-        width: 150px;
-        height: 350px;
-    }
+    
 }
+
+
 
