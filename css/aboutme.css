@@ -65,10 +65,9 @@
     
     .gird-container > div.resume {
         grid-area: resume;
-        text-align: center;
     }
     .resume-form {
-        width: 100%;
+        width: 90%;
         aspect-ratio: 4/3;
     }
     
