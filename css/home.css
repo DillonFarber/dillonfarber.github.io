@@ -2,6 +2,7 @@
 @media only screen and (min-width: 600px){
     body{
         background-color: rgb(18, 17, 17);
+        margin: 0;
     }
     .gird-container {
         display: grid;
@@ -66,24 +67,25 @@
 }
 @media only screen and (max-width: 600px){
     body{
+        -ms-overflow-style: none;  
+        scrollbar-width: none;
         background-color: rgb(18, 17, 17);
-        margin: 0px;
+        margin: 0;
+    }
+    body::-webkit-scrollbar {
+        display: none;
     }
     .gird-container {
         display: grid;
         grid-template-areas: 
-        "nav"
         "profile"
         "space";
-        
-        gap: 5px;
-        padding: 5px;
     }
     
     
     .gird-container > div.body-colm {
         grid-area: profile;
-        align-content: center;
+        text-align: center;
         margin-top: 25%;
     }
     
@@ -99,6 +101,10 @@
         height: 150px;
         border-radius: 50%;
         right: 0%;
+    }
+
+    .details > p {
+        margin: 5px;
     }
     
 }

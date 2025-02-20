@@ -1,45 +1,19 @@
 @media only screen and (min-width: 600px){
     body{
         background-color: rgb(18, 17, 17);
+        margin: 0;
     }
     .gird-container {
         display: grid;
         grid-template-areas: 
-        "nav title appicon"
+        'nav title appicon'
+        'nav lang lang'
         'nav description description'
         'nav media media';
-        
-        gap: 5px;
-        padding: 5px;
-    }
-    
-    .gird-container > div.nav-colm {
-        position: relative;
-        grid-area: nav;
-    }
-    
-    .web-name {
-        margin: 20px 20px;
-        color: aliceblue;
-    }
-    
-    .gird-container > div.nav-list {
-        position: sticky;
-        grid-area: nav;
-        top: 100px;
-        list-style-type: none;
-        margin: 10px;
-        padding: 0;
     }
 
-    #nav-sticky {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
-    }
 
     .gird-container > div.title{
-        position: relative;
         grid-area: title;
     }
 
@@ -57,9 +31,30 @@
         justify-content: center;
     }
 
-    .gird-container > .media{
+    .gird-container > div.media{
         grid-area: media;
         
+    }
+
+    .gird-container > div.software-lang {
+        grid-area: lang;
+    }
+
+    h2.s-l-title {
+        margin: 20px 0px 0px 30px;
+        font-size: 25px;
+        color: aliceblue;
+    }
+    
+    .used-s-l {
+        color:aliceblue;
+        font-size: 20px;
+        margin: 10px 0px 0px 50px;
+    }
+
+    .s-l {
+        display: inline;
+        margin-right: 10px;
     }
     
     .media {
@@ -107,6 +102,30 @@
         height: 400px;
         width: 200px;
         
+    }
+
+    .img-card {
+        position: relative;
+        display: inline;
+        aspect-ratio: 1.0;
+        object-fit: fill;
+        border-radius: 20px;
+        height: 400px;
+        width: 200px;
+        
+    }
+    .no-media > p {
+        display: inline-block;
+        color: aliceblue;
+        font-size: 20px;
+    }
+    
+    .line {
+        display: inline-block;
+        background-color: aliceblue;
+        width: 25%;
+        height: 2px;
+        margin: 3px;
     }
   
 }
@@ -172,7 +191,12 @@
     .used-s-l {
         color:aliceblue;
         font-size: 20px;
-        margin: 10px 0px 0px 40px;
+        margin: 10px 0px 0px 50px;
+    }
+
+    .s-l {
+        display: inline;
+        margin-right: 10px;
     }
     
 
@@ -241,7 +265,29 @@
         border-radius: 20px;
         height: 300px;
         width: 150px;
-        
+    }
+
+    .img-card {
+        position: relative;
+        display: inline;
+        aspect-ratio: 1.0;
+        object-fit: fill;
+        border-radius: 20px;
+        height: 300px;
+        width: 150px;
+    }
+    .no-media > p {
+        display: inline-block;
+        color: aliceblue;
+        font-size: 20px;
+    }
+    
+    .line {
+        display: inline-block;
+        background-color: aliceblue;
+        width: 25%;
+        height: 2px;
+        margin: 3px;
     }
 
 }
