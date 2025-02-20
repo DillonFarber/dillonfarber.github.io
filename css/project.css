@@ -5,7 +5,9 @@
     .gird-container {
         display: grid;
         grid-template-areas: 
-        "nav projects projects";
+        "nav title appicon"
+        'nav description description'
+        'nav media media';
         
         gap: 5px;
         padding: 5px;
@@ -35,48 +37,193 @@
         top: 0;
         overflow: hidden;
     }
+
+    .gird-container > div.title{
+        position: relative;
+        grid-area: title;
+    }
+
+    .gird-container > div.description {
+        grid-area: description;
+    }
+
+    .gird-container > div.appicon {
+        grid-area: appicon;
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        background-color: darkgrey;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .gird-container > .media{
+        grid-area: media;
+        
+    }
+    
+    .media {
+        margin: 10px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    .description > p {
+        color: aliceblue;
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .noIcon {
+        font-size: 30px;
+
+    }
+
+    .title {
+        color: aliceblue
+    }
+
+    .media-card {
+        display: inline-block;
+        height: 400px;
+        width: 200px;
+        margin: 5px;
+        background-color: darkgray;
+        border-radius: 20px;
+        text-align: center;
+        justify-content: center;
+
+
+    }
+
+    .video-card {
+        position: relative;
+        display: inline;
+        aspect-ratio: 1.0;
+        object-fit: fill;
+        border-radius: 20px;
+        height: 400px;
+        width: 200px;
+        
+    }
+  
 }
 
 @media only screen and (max-width: 600px) {
     body{
+        -ms-overflow-style: none;  
+        scrollbar-width: none;
         background-color: rgb(18, 17, 17);
+        margin: 0;
+    }
+    body::-webkit-scrollbar {
+        display: none;
     }
     .gird-container {
         display: grid;
         grid-template-areas: 
-        "header header header "
-        "nav projects projects";
-        
-        gap: 5px;
-        padding: 5px;
+        "title"
+        'appicon'
+        'description'
+        'media';
     }
-    
-    .gird-container > div.nav-colm {
-        position: relative;
-        grid-area: nav;
-    }
-    
-    .web-name {
-        margin: 20px 20px;
+
+    .description > p {
         color: aliceblue;
+        font-size: 20px;
+        margin: 20px;
     }
+
+    .gird-container > div.title{
+        grid-area: title;
+        color: aliceblue;
+        margin: 50px 10px 0px 10px;
+        text-align: center;
+        align-content: center;
     
-    .gird-container > div.nav-list {
-        position: sticky;
-        grid-area: nav;
-        top: 100px;
-        list-style-type: none;
+    }
+    .gird-container > div.appicon{
+        grid-area: appicon;
+        margin: 0px 20px 0px 10px;
+        align-items: center;
+        text-align: center;
+    }
+    .gird-container > div.description{
+        grid-area: description;
+    }
+    .gird-container > div.media{
+        grid-area: media;
+    }
+    .media {
         margin: 10px;
-        padding: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
     }
 
-    #nav-sticky {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
+    .title-div {
+        text-align: center;
     }
 
-    
+    .description > p {
+        color: aliceblue;
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .noIcon {
+        font-size: 20px;
+
+    }
+
+    .title {
+        color: aliceblue
+    }
+
+    .media-card {
+        display: inline-block;
+        height: 300px;
+        width: 150px;
+        margin: 5px;
+        background-color: darkgray;
+        border-radius: 20px;
+        text-align: center;
+        align-content: center;
+        object-fit: contain;
+    }
+    .media-placeholder > p {
+        font-size: 20px;
+    }
+    .appicon {
+        grid-area: projects;
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        background-color: darkgrey;
+        text-align: center;
+        align-content: center;
+    }
+
+    .media-card > p{
+        position: relative;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .video-card {
+        position: relative;
+        display: inline;
+        aspect-ratio: 1.0;
+        object-fit: fill;
+        border-radius: 20px;
+        height: 300px;
+        width: 150px;
+        
+    }
+
 }
 
 
