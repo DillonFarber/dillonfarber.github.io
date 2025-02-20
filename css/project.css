@@ -126,6 +126,7 @@
         grid-template-areas: 
         "title"
         'appicon'
+        'lang'
         'description'
         'media';
     }
@@ -156,6 +157,25 @@
     .gird-container > div.media{
         grid-area: media;
     }
+
+    .gird-container > div.software-lang {
+        grid-area: lang;
+        margin: 20px;
+    }
+
+    h2.s-l-title {
+        margin: 20px 0px 0px 30px;
+        font-size: 25px;
+        color: aliceblue;
+    }
+    
+    .used-s-l {
+        color:aliceblue;
+        font-size: 20px;
+        margin: 10px 0px 0px 40px;
+    }
+    
+
     .media {
         margin: 10px;
         width: 100%;
@@ -225,6 +245,4 @@
     }
 
 }
-
-
 

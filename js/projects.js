@@ -1,7 +1,7 @@
 const map = new Map([
     ['p0', {
         name: 'Nerd Haven App',
-        lang: ['flutter', 'dart'],
+        lang: ['Flutter', 'Dart'],
         description: 'A one stop shop for all things media. From movies to games, games to books, and books to shows. Whatever you decide to put in your list, its yours. The Nerd Haven is a one stop shop for your backlog. Make ordered lists, ques, or just a junk drawer. Its up to you!',
         img: ['/media/imgs'],
         vid: ['/media/videos/listappprojectvideo.mp4'],
@@ -50,10 +50,12 @@ window.onload = function () {
     document.getElementById('title').innerHTML = map.get(id).name;
     document.getElementById('description').innerHTML = map.get(id).description;
     for(let i = 0; i < map.get(id).vid.length; i++){
-        let media = document.getElementById('media');
         document.getElementById('media').innerHTML += ('<div class=\"media-card\"><video class=\"video-card\" src=\"' + map.get(id).vid[i] +'\" controls autoplay ></video></div>');
     }
     for(let i = 0; i < map.get(id).img.length; i++){
 
+    }
+    for(let i = 0; i < map.get(id).lang.length; i++){
+        document.getElementById('used-s-l').innerHTML += ('<p class=\"used-s-l\">' + map.get(id).lang[i] + '</p>');
     }
 }
