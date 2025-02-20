@@ -31,7 +31,7 @@
     
     .gird-container > div.title1{
         grid-area: title1;
-        margin: 20% 10% 0% 10%;
+        margin: 0% 10% 0% 10%;
     }
     
     .gird-container > div.about-me {
@@ -123,6 +123,8 @@
     
     .skill-card-front, .skill-card-back {
         position: absolute;
+        text-align: center;
+        justify-content: center;
         top: 0;
         left: 0;
         z-index: 1;
