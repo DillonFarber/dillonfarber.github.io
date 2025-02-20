@@ -61,6 +61,7 @@
 
     .gird-container > div.resume-title{
         grid-area: resume-title;
+        margin: 0% 10% 0% 10%;
     }
     
     .gird-container > div.resume {
