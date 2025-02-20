@@ -14,35 +14,14 @@
         "nav service service"
         "nav title3 title3"
         "nav family family"
+        "nav resume-title resume-title"
+        "nav resume resume"
         "nav skills skills";
         
         gap: 5px;
         padding: 5px;
     }
-    
-    .gird-container > div.nav-colm {
-        position: relative;
-        grid-area: nav;
-    }
-    
-    .web-name {
-        margin: 20px 20px;
-        color: aliceblue;
-    }
-    .gird-container > h1.web-name {
-        position: fixed;
-        grid-area: header;
-    }
-    
-    .gird-container > div.nav-list {
-        position: sticky;
-        grid-area: nav;
-        top: 100px;
-        list-style-type: none;
-        margin: 10px;
-        padding: 0;
-    }
-    
+
     
     .gird-container > div.skills-div {
         grid-area: skills;
@@ -79,11 +58,18 @@
         grid-area: family;
         margin: 0% 15% 0% 15%;
     }
+
+    .gird-container > div.resume-title{
+        grid-area: resume-title;
+    }
     
-    #nav-sticky {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
+    .gird-container > div.resume {
+        grid-area: resume;
+        text-align: center;
+    }
+    .resume-form {
+        width: 100%;
+        aspect-ratio: 4/3;
     }
     
     .body-h2 {
@@ -216,6 +202,7 @@
         "service"
         "title3"
         "family"
+        "resume"
         "skills";
         position: relative;
         z-index: 0;
@@ -262,20 +249,6 @@
         grid-area: family;
         margin: 0% 15% 0% 15%;
     }
-
-    /* .gird-container > div.rand{
-        grid-area: rand;
-        position: relative;
-        height: 100px;
-        width: 200px;
-        background-color: #d8d8d8;
-    }
-    .random{
-        position: absolute;
-        height: 100px;
-        width: 200px;
-        background-color: #d8d8d8;
-    } */
     
     .body-h2 {
         color: #bababa;
@@ -398,5 +371,12 @@
         font-size: 15px;
         color:#4c7c78
     }
-}
 
+    .gird-container > div.resume {
+        grid-area: resume;
+        text-align: center;
+    }
+    .resume-form {
+        width: 90%;
+    }
+}

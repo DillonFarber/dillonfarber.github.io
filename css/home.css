@@ -14,24 +14,14 @@
         padding: 5px;
     }
     
-    .gird-container > div.nav-colm {
-        position: relative;
-        grid-area: nav;
-    }
-    
+
     .gird-container > div.body-colm {
         grid-area: profile;
         align-content: center;
         margin-top: 25%;
     }
-    .web-name {
-        margin: 20px 20px;
-        color: aliceblue;
-    }
-    .gird-container > h1.web-name {
-        position: fixed;
-        grid-area: header;
-    }
+
+
     
     
     .gird-container > div.nav-list {
@@ -59,11 +49,7 @@
         right: 0%;
     }
     
-    #nav-sticky {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
-    }
+
 }
 @media only screen and (max-width: 600px){
     body{
@@ -104,7 +90,7 @@
     }
 
     .details > p {
-        margin: 5px;
+        margin: 15px;
     }
     
 }

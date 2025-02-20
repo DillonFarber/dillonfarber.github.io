@@ -9,6 +9,7 @@
         'nav title appicon'
         'nav lang lang'
         'nav description description'
+        'nav media-title media-title'
         'nav media media';
     }
 
@@ -33,11 +34,17 @@
 
     .gird-container > div.media{
         grid-area: media;
+        text-align: center;
         
     }
 
     .gird-container > div.software-lang {
         grid-area: lang;
+    }
+
+    .gird-container > div.media-title {
+        grid-area: media-title;
+        margin-left: 30px;
     }
 
     h2.s-l-title {

@@ -64,7 +64,7 @@ window.onload = function () {
         data[tmp[0]] = tmp[1];
     }
     id = data.id;
-    document.getElementById('title').innerHTML = '<p class=\"title\">hello</p>';
+    document.getElementById('title').innerHTML = '<p class=\"title\">' + map.get(id).name + '</p>';
     document.getElementById('description').innerHTML = map.get(id).description;
 
     for(let i = 0; i < map.get(id).lang.length; i++){
